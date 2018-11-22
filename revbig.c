@@ -6,8 +6,8 @@ main()
 {
     const char      str[] = "1234";
     const size_t    len = strlen(str);
-    const size_t    mult = 1000000;
-    const size_t    biglen = len * mult;
+    const size_t    mul = 1000000;
+    const size_t    biglen = len * mul;
     char            big[biglen + 1];
     size_t          half;
     char            tmp;
