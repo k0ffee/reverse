@@ -2,7 +2,16 @@
 use warnings;
 use strict;
 
-my $string = '1234';
+my $string;
+
+if ($ARGV[0]) {
+    $string = do {local(@ARGV, $/) = $ARGV[0]; <>}
+        or die;
+} else {
+    $string = do {local $/; <STDIN>};
+}
+
+chomp $string;
 
 my $len = length($string);
 
